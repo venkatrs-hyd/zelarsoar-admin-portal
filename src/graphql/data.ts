@@ -159,9 +159,6 @@ export const alerts: Alert[] = Array.from({ length: 60 }, (_, i) => makeAlert(i)
   (a, b) => b.timestamp.localeCompare(a.timestamp),
 );
 
-/** One alert is marked: its `geo` field resolver throws (partial-error demo, design.md §4). */
-export const GEO_FAIL_ALERT_ID = 'ALT-10007';
-
 /** Curated alert that matches the dashboard mockup's top activity row. */
 alerts[0] = {
   ...alerts[0],

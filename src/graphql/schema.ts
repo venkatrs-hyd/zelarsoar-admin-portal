@@ -5,7 +5,6 @@
 import { makeExecutableSchema } from '@graphql-tools/schema';
 import { typeDefs } from './typeDefs';
 import {
-  GEO_FAIL_ALERT_ID,
   alerts,
   auditEvents,
   blockedIps,
@@ -179,16 +178,6 @@ const resolvers = {
 
   DashboardKpis: {
     alertStats: () => alertStats(),
-  },
-
-  Alert: {
-    /** Per-field fault demo: geo enrichment fails for one marked alert (partial data + errors). */
-    geo: (alert: Alert) => {
-      if (alert.id === GEO_FAIL_ALERT_ID) {
-        throw new Error('geo enrichment timed out (maxmind upstream)');
-      }
-      return alert.geo;
-    },
   },
 
   ThreatIntelSummary: {
