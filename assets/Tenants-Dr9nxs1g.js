@@ -1,4 +1,4 @@
-import{r as d,j as e,C as P,E as Z,B as K,i as f,G as U,S as F,L as X,u as B}from"./index-DpOZ-DcT.js";import{T as Y}from"./TableSkeleton-DxcebCbS.js";import{u as J,E as ee,g as R}from"./ErrorCard-Bz2FSUQ0.js";import{S as O}from"./SpinnerButton-D4tfpNez.js";import{i as C,F as z,l as v,a as M,b as _}from"./Modal-CWsNxrHj.js";import{P as se}from"./plus-gopS_r9G.js";import{u as q}from"./useMutation-CJLhIgyn.js";import"./circle-alert-C9FvzmXR.js";const D=R`
+import{r as d,j as e,C as P,E as Z,B as K,i as f,G as U,S as F,L as X,u as B}from"./index-BidShHf_.js";import{T as Y}from"./TableSkeleton-Cu-FU2kU.js";import{u as J,E as ee,g as R}from"./ErrorCard-BLGRINNO.js";import{S as O}from"./SpinnerButton-BRs71W3X.js";import{i as C,F as z,l as v,a as M,b as _}from"./Modal-K3CZwfof.js";import{P as se}from"./plus-D4XH5JRE.js";import{u as q}from"./useMutation-CQ9jIxd8.js";import"./circle-alert-YdrWNop0.js";const D=R`
   fragment TenantRow on Tenant {
     id
     name
