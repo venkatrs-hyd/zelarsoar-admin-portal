@@ -5,6 +5,48 @@ module.exports = {
   theme: {
     extend: {
       colors: {
+        /* ZelarSOAR brand tokens (design.md §2) */
+        paper: "var(--paper)",
+        ink: {
+          DEFAULT: "var(--ink)",
+          2: "var(--ink-2)",
+          3: "var(--ink-3)",
+        },
+        faint: "var(--faint)",
+        line: {
+          DEFAULT: "var(--line)",
+          soft: "var(--line-soft)",
+        },
+        brand: {
+          DEFAULT: "var(--brand)",
+          strong: "var(--brand-strong)",
+          hover: "var(--brand-hover)",
+          ink: "var(--brand-ink)",
+          tint: "var(--brand-tint)",
+          accent: "var(--accent)",
+        },
+        calm: {
+          DEFAULT: "var(--calm)",
+          tint: "var(--calm-tint)",
+        },
+        forest: {
+          DEFAULT: "var(--forest)",
+          2: "var(--forest-2)",
+        },
+        sev: {
+          critical: "var(--sev-critical)",
+          "critical-ink": "var(--sev-critical-ink)",
+          "critical-tint": "var(--sev-critical-tint)",
+          high: "var(--sev-high)",
+          "high-ink": "var(--sev-high-ink)",
+          "high-tint": "var(--sev-high-tint)",
+          medium: "var(--sev-medium)",
+          "medium-ink": "var(--sev-medium-ink)",
+          "medium-tint": "var(--sev-medium-tint)",
+          low: "var(--sev-low)",
+          "low-ink": "var(--sev-low-ink)",
+          "low-tint": "var(--sev-low-tint)",
+        },
         border: "hsl(var(--border))",
         input: "hsl(var(--input))",
         ring: "hsl(var(--ring))",
@@ -49,7 +91,14 @@ module.exports = {
           ring: "hsl(var(--sidebar-ring))",
         },
       },
+      fontFamily: {
+        sans: ["Inter", "system-ui", "-apple-system", "sans-serif"],
+        display: ["Poppins", "ui-sans-serif", "system-ui", "sans-serif"],
+        mono: ["'JetBrains Mono'", "ui-monospace", "SFMono-Regular", "monospace"],
+      },
       borderRadius: {
+        card: "var(--radius-card)",
+        pill: "999px",
         xl: "calc(var(--radius) + 4px)",
         lg: "var(--radius)",
         md: "calc(var(--radius) - 2px)",
@@ -58,6 +107,8 @@ module.exports = {
       },
       boxShadow: {
         xs: "0 1px 2px 0 rgb(0 0 0 / 0.05)",
+        card: "var(--shadow-card)",
+        "card-lg": "var(--shadow-card-lg)",
       },
       keyframes: {
         "accordion-down": {
@@ -77,6 +128,9 @@ module.exports = {
         "accordion-down": "accordion-down 0.2s ease-out",
         "accordion-up": "accordion-up 0.2s ease-out",
         "caret-blink": "caret-blink 1.25s ease-out infinite",
+        "calm-pulse": "calm-pulse 2s ease-in-out infinite",
+        "toast-rise": "toast-rise 0.25s ease-out",
+        "spin-rot": "spin-rot 0.7s linear infinite",
       },
     },
   },

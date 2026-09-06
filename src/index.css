@@ -1,67 +1,75 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Poppins:wght@500;600;700&family=JetBrains+Mono:wght@400;500;600&display=swap');
+
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
 
 @layer base {
   :root {
-    --background: 0 0% 100%;
-    --foreground: 240 10% 3.9%;
-    --card: 0 0% 100%;
-    --card-foreground: 240 10% 3.9%;
-    --popover: 0 0% 100%;
-    --popover-foreground: 240 10% 3.9%;
-    --primary: 240 5.9% 10%;
-    --primary-foreground: 0 0% 98%;
-    --secondary: 240 4.8% 95.9%;
-    --secondary-foreground: 240 5.9% 10%;
-    --muted: 240 4.8% 95.9%;
-    --muted-foreground: 240 3.8% 46.1%;
-    --accent: 240 4.8% 95.9%;
-    --accent-foreground: 240 5.9% 10%;
-    --destructive: 0 84.2% 60.2%;
-    --destructive-foreground: 0 0% 98%;
-    --border: 240 5.9% 90%;
-    --input: 240 5.9% 90%;
-    --ring: 240 5.9% 10%;
-    --radius: 0.625rem;
-    --sidebar-background: 0 0% 98%;
-    --sidebar-foreground: 240 5.3% 26.1%;
-    --sidebar-primary: 240 5.9% 10%;
-    --sidebar-primary-foreground: 0 0% 98%;
-    --sidebar-accent: 240 4.8% 95.9%;
-    --sidebar-accent-foreground: 240 5.9% 10%;
-    --sidebar-border: 220 13% 91%;
-    --sidebar-ring: 217.2 91.2% 59.8%;
-  }
+    /* ZelarSOAR Enterprise DS — brand tokens (design.md §2) */
+    --paper: #F7F5F0;
+    --card-z: #FFFFFF;
+    --ink: #1E1B22;
+    --ink-2: #464447;
+    --ink-3: #6E6A72;
+    --faint: #6B6557;
+    --line: #E8E4DA;
+    --line-soft: #F0EDE6;
+    --brand: #429CE3;
+    --brand-strong: #2374AE;
+    --brand-hover: #1C6194;
+    --brand-ink: #1B659A;
+    --brand-tint: #EAF4FC;
+    --accent: #99C9EF;
+    --calm: #1E7A55;
+    --calm-tint: #E3F2EA;
+    --forest: #0E2A1F;
+    --forest-2: #16352A;
+    --sev-critical: #B3402E;
+    --sev-critical-ink: #8F3526;
+    --sev-critical-tint: #F9E9E5;
+    --sev-high: #C26A1B;
+    --sev-high-ink: #96520F;
+    --sev-high-tint: #FAEEDE;
+    --sev-medium: #A88B1E;
+    --sev-medium-ink: #7D6A12;
+    --sev-medium-tint: #F8F3DC;
+    --sev-low: #5B7A8C;
+    --sev-low-ink: #40606F;
+    --sev-low-tint: #E8F0F3;
+    --radius-card: 12px;
+    --shadow-card: 0 1px 2px rgba(30, 27, 34, 0.06), 0 4px 16px rgba(30, 27, 34, 0.05);
+    --shadow-card-lg: 0 2px 6px rgba(30, 27, 34, 0.08), 0 12px 32px rgba(30, 27, 34, 0.1);
 
-  .dark {
-    --background: 240 10% 3.9%;
-    --foreground: 0 0% 98%;
-    --card: 240 10% 3.9%;
-    --card-foreground: 0 0% 98%;
-    --popover: 240 10% 3.9%;
-    --popover-foreground: 0 0% 98%;
-    --primary: 0 0% 98%;
-    --primary-foreground: 240 5.9% 10%;
-    --secondary: 240 3.7% 15.9%;
-    --secondary-foreground: 0 0% 98%;
-    --muted: 240 3.7% 15.9%;
-    --muted-foreground: 240 5% 64.9%;
-    --accent: 240 3.7% 15.9%;
-    --accent-foreground: 0 0% 98%;
-    --destructive: 0 62.8% 30.6%;
+    /* shadcn/ui template tokens (kept in sync with brand) */
+    --background: 43 24% 95%;
+    --foreground: 285 12% 12%;
+    --card: 0 0% 100%;
+    --card-foreground: 285 12% 12%;
+    --popover: 0 0% 100%;
+    --popover-foreground: 285 12% 12%;
+    --primary: 208 63% 41%;
+    --primary-foreground: 0 0% 100%;
+    --secondary: 45 20% 93%;
+    --secondary-foreground: 285 12% 12%;
+    --muted: 45 20% 93%;
+    --muted-foreground: 300 2% 42%;
+    --accent-z: 207 73% 95%;
+    --accent-foreground: 206 73% 35%;
+    --destructive: 9 60% 44%;
     --destructive-foreground: 0 0% 98%;
-    --border: 240 3.7% 15.9%;
-    --input: 240 3.7% 15.9%;
-    --ring: 240 4.9% 83.9%;
-    --sidebar-background: 240 5.9% 10%;
-    --sidebar-foreground: 240 4.8% 95.9%;
-    --sidebar-primary: 224.3 76.3% 48%;
+    --border: 42 18% 89%;
+    --input: 42 18% 89%;
+    --ring: 207 63% 41%;
+    --radius: 0.625rem;
+    --sidebar-background: 152 51% 11%;
+    --sidebar-foreground: 43 24% 95%;
+    --sidebar-primary: 207 63% 41%;
     --sidebar-primary-foreground: 0 0% 100%;
-    --sidebar-accent: 240 3.7% 15.9%;
-    --sidebar-accent-foreground: 240 4.8% 95.9%;
-    --sidebar-border: 240 3.7% 15.9%;
-    --sidebar-ring: 217.2 91.2% 59.8%;
+    --sidebar-accent: 150 43% 15%;
+    --sidebar-accent-foreground: 43 24% 95%;
+    --sidebar-border: 150 43% 15%;
+    --sidebar-ring: 207 73% 58%;
   }
 }
 
@@ -69,7 +77,186 @@
   * {
     @apply border-border;
   }
+  html {
+    font-family: 'Inter', system-ui, -apple-system, sans-serif;
+    -webkit-font-smoothing: antialiased;
+  }
   body {
-    @apply bg-background text-foreground;
+    background-color: var(--paper);
+    color: var(--ink);
+  }
+  ::selection {
+    background: var(--accent);
+    color: var(--ink);
+  }
+  :focus-visible {
+    outline: 2px solid var(--brand-strong);
+    outline-offset: 2px;
+    border-radius: 6px;
+  }
+}
+
+@layer components {
+  .font-display {
+    font-family: 'Poppins', ui-sans-serif, system-ui, sans-serif;
+  }
+  .mono {
+    font-family: 'JetBrains Mono', ui-monospace, SFMono-Regular, monospace;
+  }
+  /* Card surface */
+  .card-surface {
+    background: var(--card-z);
+    border: 1px solid var(--line);
+    border-radius: var(--radius-card);
+    box-shadow: var(--shadow-card);
+  }
+  /* Eyebrow label */
+  .eyebrow {
+    font-size: 10.5px;
+    font-weight: 600;
+    letter-spacing: 0.14em;
+    text-transform: uppercase;
+    color: var(--faint);
+  }
+  /* Skeleton shimmer */
+  .skel {
+    position: relative;
+    overflow: hidden;
+    background: #ece8de;
+    border-radius: 8px;
+  }
+  .skel::after {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.7), transparent);
+    transform: translateX(-100%);
+    animation: shimmer 1.5s infinite;
+  }
+  /* Buttons */
+  .btn {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+    font-family: 'Poppins', sans-serif;
+    font-weight: 600;
+    font-size: 13.5px;
+    line-height: 1;
+    border-radius: 10px;
+    padding: 0 16px;
+    height: 38px;
+    transition: background 0.15s, border-color 0.15s, color 0.15s;
+    cursor: pointer;
+    border: 1px solid transparent;
+  }
+  .btn-primary {
+    background: var(--brand-strong);
+    color: #fff;
+  }
+  .btn-primary:hover {
+    background: var(--brand-hover);
+  }
+  .btn-secondary {
+    background: #fff;
+    color: var(--ink);
+    border-color: var(--line);
+  }
+  .btn-secondary:hover {
+    border-color: #cfc8b8;
+    background: #fcfbf8;
+  }
+  .btn-ghost {
+    background: transparent;
+    color: var(--brand-ink);
+  }
+  .btn-ghost:hover {
+    background: var(--brand-tint);
+  }
+  .btn[disabled] {
+    opacity: 0.55;
+    cursor: not-allowed;
+  }
+  .btn-sm {
+    height: 30px;
+    padding: 0 12px;
+    font-size: 12px;
+    border-radius: 8px;
+  }
+  /* Sidebar nav (forest shell) */
+  .nav-label {
+    font-size: 10px;
+    font-weight: 600;
+    letter-spacing: 0.13em;
+    text-transform: uppercase;
+    color: rgba(244, 241, 233, 0.45);
+    padding: 0 10px;
+    margin-bottom: 6px;
+  }
+  .nav-item {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    padding: 8px 10px;
+    border-radius: 10px;
+    font-size: 13.5px;
+    font-weight: 500;
+    color: rgba(244, 241, 233, 0.75);
+  }
+  .nav-item:hover {
+    background: var(--forest-2);
+    color: #f4f1e9;
+  }
+  .nav-item.active {
+    background: var(--forest-2);
+    color: #ffffff;
+    font-weight: 600;
+    box-shadow: inset 2px 0 0 var(--brand);
+  }
+  .nav-item svg {
+    flex: none;
+  }
+}
+
+@keyframes shimmer {
+  to {
+    transform: translateX(100%);
+  }
+}
+
+@keyframes calm-pulse {
+  0%,
+  100% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 0.35;
+  }
+}
+
+@keyframes toast-rise {
+  from {
+    opacity: 0;
+    transform: translateY(8px);
+  }
+  to {
+    opacity: 1;
+    transform: none;
+  }
+}
+
+@keyframes spin-rot {
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation: none !important;
+    transition: none !important;
+    scroll-behavior: auto !important;
   }
 }
