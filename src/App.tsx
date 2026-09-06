@@ -8,6 +8,17 @@ import NotFound from '@/pages/NotFound';
 // Route-level code splitting (design.md §8). Page agents replace the
 // Placeholder stubs by creating real page files and swapping the element.
 const Dashboard = lazy(() => import('@/pages/Dashboard'));
+const Alerts = lazy(() => import('@/pages/Alerts'));
+const Incidents = lazy(() => import('@/pages/Incidents'));
+const SoarPolicies = lazy(() => import('@/pages/SoarPolicies'));
+const Tenants = lazy(() => import('@/pages/Tenants'));
+const UsersRoles = lazy(() => import('@/pages/UsersRoles'));
+const Licensing = lazy(() => import('@/pages/Licensing'));
+const States = lazy(() => import('@/pages/States'));
+
+function lazyPage(el: React.ReactNode) {
+  return <Suspense fallback={<PageFallback />}>{el}</Suspense>;
+}
 
 function PageFallback() {
   return (
@@ -36,13 +47,13 @@ export default function App() {
             </Suspense>
           }
         />
-        <Route path="alerts" element={<Placeholder />} />
-        <Route path="incidents" element={<Placeholder />} />
-        <Route path="soar-policies" element={<Placeholder />} />
-        <Route path="tenants" element={<Placeholder />} />
-        <Route path="users-roles" element={<Placeholder />} />
-        <Route path="licensing" element={<Placeholder />} />
-        <Route path="states" element={<Placeholder />} />
+        <Route path="alerts" element={lazyPage(<Alerts />)} />
+        <Route path="incidents" element={lazyPage(<Incidents />)} />
+        <Route path="soar-policies" element={lazyPage(<SoarPolicies />)} />
+        <Route path="tenants" element={lazyPage(<Tenants />)} />
+        <Route path="users-roles" element={lazyPage(<UsersRoles />)} />
+        <Route path="licensing" element={lazyPage(<Licensing />)} />
+        <Route path="states" element={lazyPage(<States />)} />
         <Route path="design-system" element={<Placeholder />} />
         <Route path="threat-map" element={<ComingSoon />} />
         <Route path="audit-log" element={<ComingSoon />} />
